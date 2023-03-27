@@ -4,10 +4,15 @@
     {
         Console.BackgroundColor = ConsoleColor.DarkBlue;
         Console.Clear();
-        string? nome;
-        int slm = int.Parse("1");
-        Console.WriteLine("Come ti chiami?");
-        nome = Console.ReadLine();
-        Console.WriteLine("Ciao " + nome + "!");
+        // impostiamo la base della nostra tabellina
+        int baseTabellina = 2;
+        // decidiamo quante volte deve essere eseguita la moltiplicazione
+        int volte = 11;
+        for(int numero = 0; numero < volte; numero++)
+        {
+            int risultato = numero * baseTabellina;
+            Console.WriteLine($"{numero} * {baseTabellina} = {risultato}");
+            //Console.WriteLine(numero.ToString() + " * " + baseTabellina.ToString() + " = " + risultato.ToString());
+        }
     }
 }
