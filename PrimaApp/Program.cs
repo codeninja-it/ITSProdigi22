@@ -1,4 +1,6 @@
-﻿internal class Program
+﻿using PrimaApp;
+
+internal class Program
 {
     private static void Main(string[] args)
     {
@@ -9,9 +11,9 @@
         while (richiestaTabellina)
         {
             // impostiamo la base della nostra tabellina
-            int baseTabellina = chiediNumero("Che tabellina vuoi");
+            int baseTabellina = Utility.chiediNumero("Che tabellina vuoi");
             // decidiamo quante volte deve essere eseguita la moltiplicazione
-            int volte = chiediNumero("Fino a che numero") + 1;
+            int volte = Utility.chiediNumero("Fino a che numero") + 1;
 
             for (int numero = 0; numero < volte; numero++)
             {
@@ -20,32 +22,10 @@
                 //Console.WriteLine(numero.ToString() + " * " + baseTabellina.ToString() + " = " + risultato.ToString());
             }
 
-            string risposta = chiedi("Vuoi un'altra tabellina? (s/n)");
+            string risposta = Utility.chiedi("Vuoi un'altra tabellina? (s/n)");
             richiestaTabellina = risposta == "s";
         }
         Console.WriteLine("Buona giornata!");
-    }
-
-    /// <summary>
-    /// funzione per porre una domanda all'utente tramite la console
-    /// </summary>
-    /// <param name="domanda">la domanda da porre all'utente</param>
-    /// <returns>quello che l'utete ha scritto in console</returns>
-    private static string chiedi(string domanda)
-    {
-        // scrivo la domanda in console
-        Console.Write(domanda + ": ");
-        // recupero dal buffer la risposta
-        string risposta = Console.ReadLine();
-        // la restituisco a chimi ha chiamato
-        return risposta;
-    }
-
-    private static int chiediNumero(string domanda)
-    {
-        Console.Write(domanda + ": ");
-        string risposta = Console.ReadLine();
-        return int.Parse(risposta);
     }
 
 }
