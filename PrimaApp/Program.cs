@@ -40,11 +40,22 @@ internal class Program
                 File.AppendAllText(nomeFile, testo);
             }
 
-            string risposta = Utility.chiedi("Vuoi un'altra tabellina? (s/n)");
-            richiestaTabellina = risposta == "s";
+            if(args.Length == 0)
+            {
+                string risposta = Utility.chiedi("Vuoi un'altra tabellina? (s/n)");
+                richiestaTabellina = risposta == "s";
+            } else
+            {
+                richiestaTabellina = false;
+            }
+            
         }
-        Console.WriteLine("Buona giornata!");
-        File.WriteAllText("prova.txt", "prova di scrittura", Encoding.UTF8);
+
+        if(args.Length == 0)
+        {
+            Console.WriteLine("Buona giornata!");
+        }
+        
     }
 
 }
