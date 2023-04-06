@@ -8,9 +8,6 @@ internal class Program
     // secondo parametro sarà la quantità di volte
     private static void Main(string[] args)
     {
-        Console.BackgroundColor = ConsoleColor.DarkBlue;
-        Console.Clear();
-
         bool richiestaTabellina = true;
         while (richiestaTabellina)
         {
