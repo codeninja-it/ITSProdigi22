@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "SecondaApp": {
+      "commandName": "Project",
+      "commandLineArgs": "2 10"
+    }
+  }
+}

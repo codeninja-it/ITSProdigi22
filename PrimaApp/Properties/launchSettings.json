@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "PrimaApp": {
+      "commandName": "Project",
+      "commandLineArgs": "2 10"
+    }
+  }
+}
