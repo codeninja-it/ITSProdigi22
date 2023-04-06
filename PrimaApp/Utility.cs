@@ -30,7 +30,5 @@ namespace PrimaApp
             return int.Parse(risposta);
         }
 
-
-
     }
 }
