@@ -40,7 +40,9 @@
             } else
             {
                 // analizza su
-                Casella? su = scacchiera.Where(cella => cella.muro == false && cella.x == attuale.x && cella.y == attuale.y - 1).FirstOrDefault();
+                Casella? su = scacchiera
+                    .Where(cella => cella.muro == false && cella.x == attuale.x && cella.y == attuale.y - 1)
+                    .FirstOrDefault();
                 if(su != null)
                 {
                     Analizza(scacchiera, su, arrivo);
