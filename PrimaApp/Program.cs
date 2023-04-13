@@ -52,7 +52,25 @@ internal class Program
         {
             Console.WriteLine("Buona giornata!");
         }
+
+
+        bool premuto = false;
+        setup();
+        while (true)
+        {
+            loop();
+        }
         
+    }
+
+    static protected void setup()
+    {
+
+    }
+
+    static public void loop()
+    {
+
     }
 
 }
