@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SecondaApp", "SecondaApp\Se
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TerzaApp", "TerzaApp\TerzaApp.csproj", "{BC8D4F83-823F-4768-9E7B-90077938368A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuartaApp", "QuartaApp\QuartaApp.csproj", "{BC4C5994-57D6-4B89-8595-CDD3E7A85C4E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuartaApp", "QuartaApp\QuartaApp.csproj", "{BC4C5994-57D6-4B89-8595-CDD3E7A85C4E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rubrica", "Rubrica\Rubrica.csproj", "{28ECEB4F-59A1-4230-ADAA-435BB28CE0D9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{BC4C5994-57D6-4B89-8595-CDD3E7A85C4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BC4C5994-57D6-4B89-8595-CDD3E7A85C4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BC4C5994-57D6-4B89-8595-CDD3E7A85C4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28ECEB4F-59A1-4230-ADAA-435BB28CE0D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28ECEB4F-59A1-4230-ADAA-435BB28CE0D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28ECEB4F-59A1-4230-ADAA-435BB28CE0D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28ECEB4F-59A1-4230-ADAA-435BB28CE0D9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

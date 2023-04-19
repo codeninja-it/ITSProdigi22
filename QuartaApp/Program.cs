@@ -22,7 +22,7 @@ namespace QuartaApp
             Persona nuova = new Persona(persone[0].nome, persone[0].cognome, persone[0].età);
             nuova.età = 65;
 
-            Clona(nuova);
+            Compila(nuova);
 
             int totale = sommaEtà( persone[0], persone[1] );
             Console.WriteLine($"totale delle età è {totale}");
@@ -42,14 +42,21 @@ namespace QuartaApp
         }
 
         //Clona(Persona persona);
-        static void Clona(object oggetto)
+        static void Compila(object oggetto)
         {
             Type tipo = oggetto.GetType();
             PropertyInfo[] props = tipo.GetProperties();
-            foreach ( PropertyInfo pi in props )
+            foreach ( PropertyInfo pi in props.Where(x => x.CanWrite) )
             {
                 Console.Write($"Dimmi {pi.Name} : ");
                 var appoggio = Console.ReadLine();
+                if(pi.PropertyType.Name == "Int32")
+                {
+                    pi.SetValue(oggetto, int.Parse(appoggio));
+                } else
+                {
+                    pi.SetValue(oggetto, appoggio);
+                }
             }
         }
 
