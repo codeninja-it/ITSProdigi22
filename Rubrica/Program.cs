@@ -15,13 +15,15 @@ namespace Rubrica
                 switch (comando)
                 {
                     case "nuovo": // Create
+                        int nuovoId = contatti.Max(x => x.idContatto) + 1;
                         contatti.Add(
-                                new(
+                                new Contatto(
+                                        nuovoId,
                                         chiedi("Nome", false),
                                         chiedi("Cognome", false),
                                         chiedi("Telefono", false)
                                     )
-                            );
+                            ) ;
                         Console.WriteLine($"contatti presenti: {Contatto.quanti}");
                         break;
 
@@ -36,10 +38,16 @@ namespace Rubrica
                             Console.WriteLine(singolo);
                         }
                         break;
-                    case "cancella":
+
+                    case "cancella": // delete
+                        int idDaCancellare = int.Parse( chiedi("Quale id devo eliminare?") );
+
+                        int cancellati = contatti.RemoveAll(x => x.idContatto == idDaCancellare);
+                        Console.WriteLine($"{cancellati} record cancellati.");
                         break;
 
-                    case "modifica":
+                    case "modifica": // update
+
                         break;
                     
                     case "salva":
@@ -47,26 +55,27 @@ namespace Rubrica
                         Console.WriteLine("Rubrica salvata sul disco!");
                         break;
 
-                    case "apri":
+                    case "carica":
                         try
                         {
                             string buffer = File.ReadAllText("rubrica.json");
                             contatti = JsonSerializer.Deserialize<List<Contatto>>(buffer);
                             Console.WriteLine($"caricati {contatti.Count} contatti");
                         }
-                        catch
+                        catch (Exception eccezione)
                         {
                             contatti = new();
                             Console.WriteLine("Errore di caricamento del file...");
+                            Console.WriteLine(eccezione.Message);
                         }
                         break;
 
                     default:
-                        Console.WriteLine("non ho capito...");
+                        Console.WriteLine("non ho capito, puoi ripetere?");
                         break;
                 }
 
-            } while (comando != "exit");
+            } while(comando != "exit");
         }
 
         static private string chiedi(string domanda, bool corretto = true)

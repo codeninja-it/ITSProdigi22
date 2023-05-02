@@ -15,18 +15,18 @@ namespace Rubrica
         public string telefono { get; set; }
         public DateTime creazione { get; } = DateTime.Now;
 
-        public Contatto(string nome, string cognome, string telefono)
+        public Contatto(int idContatto, string nome, string cognome, string telefono)
         {
+            this.idContatto = idContatto;
             this.nome = nome;
             this.cognome = cognome;
             this.telefono = telefono;
             quanti++;
-            this.idContatto = quanti;
         }
 
         public override string ToString()
         {
-            return $"{nome}\t{cognome}\t{telefono}\t{creazione}";
+            return $"{idContatto}\t{nome}\t{cognome}\t{telefono}\t{creazione}";
         }
     }
 }
