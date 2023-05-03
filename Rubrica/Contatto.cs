@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Rubrica
 {
+
     internal class Contatto
     {
         public static int quanti { get; set; }
