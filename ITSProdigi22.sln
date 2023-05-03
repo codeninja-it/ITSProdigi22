@@ -11,7 +11,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TerzaApp", "TerzaApp\TerzaA
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuartaApp", "QuartaApp\QuartaApp.csproj", "{BC4C5994-57D6-4B89-8595-CDD3E7A85C4E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rubrica", "Rubrica\Rubrica.csproj", "{28ECEB4F-59A1-4230-ADAA-435BB28CE0D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rubrica", "Rubrica\Rubrica.csproj", "{28ECEB4F-59A1-4230-ADAA-435BB28CE0D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CatalogoInteressi", "CatalogoInteressi\CatalogoInteressi.csproj", "{34BCABA0-256E-44A0-A0ED-CD865A604C77}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RubricaWin", "RubricaWin\RubricaWin.csproj", "{BE5790ED-F1DF-448F-8A2F-48CFE7CB8BD4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +43,14 @@ Global
 		{28ECEB4F-59A1-4230-ADAA-435BB28CE0D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{28ECEB4F-59A1-4230-ADAA-435BB28CE0D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{28ECEB4F-59A1-4230-ADAA-435BB28CE0D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34BCABA0-256E-44A0-A0ED-CD865A604C77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34BCABA0-256E-44A0-A0ED-CD865A604C77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34BCABA0-256E-44A0-A0ED-CD865A604C77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34BCABA0-256E-44A0-A0ED-CD865A604C77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE5790ED-F1DF-448F-8A2F-48CFE7CB8BD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE5790ED-F1DF-448F-8A2F-48CFE7CB8BD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE5790ED-F1DF-448F-8A2F-48CFE7CB8BD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE5790ED-F1DF-448F-8A2F-48CFE7CB8BD4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
