@@ -15,7 +15,10 @@ namespace Rubrica
                 switch (comando)
                 {
                     case "nuovo": // Create
-                        int nuovoId = contatti.Max(x => x.idContatto) + 1;
+                        int nuovoId = 1;
+                        if (contatti.Any())
+                            nuovoId = contatti.Max(x => x.idContatto) + 1;
+
                         contatti.Add(
                                 new Contatto(
                                         nuovoId,
@@ -47,7 +50,17 @@ namespace Rubrica
                         break;
 
                     case "modifica": // update
+                        int idDaModificare = int.Parse( chiedi("Quale id devo modificare?")  );
 
+                        Contatto? modificato = contatti
+                            .Where(x => x.idContatto == idDaModificare) // WHERE
+                            .FirstOrDefault(); // LIMIT 1
+                        if(modificato != null)
+                        {
+                            modificato.nome = chiedi($"Nome (attualmente {modificato.nome})");
+                            modificato.cognome = chiedi($"Cognome (attualmente {modificato.cognome})");
+                            modificato.telefono = chiedi($"Telefono (attualmente {modificato.telefono})");
+                        }
                         break;
                     
                     case "salva":
