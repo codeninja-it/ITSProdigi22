@@ -19,7 +19,7 @@ namespace RubricaWin
 
         public override string ToString()
         {
-            return "";
+            return $"{nome}\t{cognome}\t{telefono}";
         }
     }
 }

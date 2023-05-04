@@ -44,7 +44,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNome.Location = new System.Drawing.Point(129, 12);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(412, 27);
+            this.txtNome.Size = new System.Drawing.Size(334, 27);
             this.txtNome.TabIndex = 0;
             // 
             // txtCognome
@@ -53,7 +53,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCognome.Location = new System.Drawing.Point(129, 45);
             this.txtCognome.Name = "txtCognome";
-            this.txtCognome.Size = new System.Drawing.Size(412, 27);
+            this.txtCognome.Size = new System.Drawing.Size(334, 27);
             this.txtCognome.TabIndex = 1;
             // 
             // txtTelefono
@@ -62,7 +62,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTelefono.Location = new System.Drawing.Point(129, 78);
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(412, 27);
+            this.txtTelefono.Size = new System.Drawing.Size(334, 27);
             this.txtTelefono.TabIndex = 2;
             // 
             // label1
@@ -98,7 +98,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnInserisci.Location = new System.Drawing.Point(12, 111);
             this.btnInserisci.Name = "btnInserisci";
-            this.btnInserisci.Size = new System.Drawing.Size(529, 29);
+            this.btnInserisci.Size = new System.Drawing.Size(451, 29);
             this.btnInserisci.TabIndex = 6;
             this.btnInserisci.Text = "inserisci";
             this.btnInserisci.UseVisualStyleBackColor = true;
@@ -113,14 +113,14 @@
             this.lstContatti.ItemHeight = 20;
             this.lstContatti.Location = new System.Drawing.Point(12, 146);
             this.lstContatti.Name = "lstContatti";
-            this.lstContatti.Size = new System.Drawing.Size(529, 344);
+            this.lstContatti.Size = new System.Drawing.Size(451, 324);
             this.lstContatti.TabIndex = 7;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(553, 530);
+            this.ClientSize = new System.Drawing.Size(475, 488);
             this.Controls.Add(this.lstContatti);
             this.Controls.Add(this.btnInserisci);
             this.Controls.Add(this.label3);
@@ -135,6 +135,7 @@
             this.Name = "Form1";
             this.Text = "Rubrica";
             this.HelpButtonClicked += new System.ComponentModel.CancelEventHandler(this.Form1_HelpButtonClicked);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 
