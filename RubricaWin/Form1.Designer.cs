@@ -115,6 +115,8 @@
             this.lstContatti.Name = "lstContatti";
             this.lstContatti.Size = new System.Drawing.Size(451, 324);
             this.lstContatti.TabIndex = 7;
+            this.lstContatti.SelectedIndexChanged += new System.EventHandler(this.lstContatti_SelectedIndexChanged);
+            this.lstContatti.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.lstContatti_KeyPress);
             // 
             // Form1
             // 

@@ -47,5 +47,26 @@ namespace RubricaWin
             string buffer = JsonSerializer.Serialize(lstContatti.Items);
             File.WriteAllText(this.Text, buffer);
         }
+
+        private void lstContatti_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(lstContatti.SelectedItem != null)
+            {
+                Contatto selezionato = (Contatto)lstContatti.SelectedItem;
+                txtNome.Text = selezionato.nome;
+                txtCognome.Text = selezionato.cognome;
+                txtTelefono.Text = selezionato.telefono;
+            }
+        }
+
+        private void lstContatti_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == '\b')
+            {
+                int indice = lstContatti.SelectedIndex;
+                if(indice != -1)
+                    lstContatti.Items.RemoveAt(indice);
+            }
+        }
     }
 }
