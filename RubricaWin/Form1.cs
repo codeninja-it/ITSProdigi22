@@ -24,7 +24,10 @@ namespace RubricaWin
                                             txtNome.Text, 
                                             txtCognome.Text, 
                                             txtTelefono.Text);
-            lstContatti.Items.Add(nuovo);
+            if (lstContatti.SelectedIndex == -1)
+                lstContatti.Items.Add(nuovo);
+            else
+                lstContatti.Items[lstContatti.SelectedIndex] = nuovo;
         }
 
         private void Form1_HelpButtonClicked(object sender, System.ComponentModel.CancelEventArgs e)
