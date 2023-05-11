@@ -79,6 +79,7 @@
             this.btnRisolvi.TabIndex = 2;
             this.btnRisolvi.Text = "risolvi";
             this.btnRisolvi.UseVisualStyleBackColor = true;
+            this.btnRisolvi.Click += new System.EventHandler(this.btnRisolvi_Click);
             // 
             // menuStrip1
             // 

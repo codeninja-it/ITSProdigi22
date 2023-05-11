@@ -1,3 +1,4 @@
+using System.Security.Cryptography.X509Certificates;
 using System.Windows.Forms;
 
 namespace LabirintoWin
@@ -7,6 +8,8 @@ namespace LabirintoWin
         private Point precedente = new Point(0,0);
         private int numCelle = 10;
         private bool[,] scacchiera;
+        private Point inizio;
+        private Point fine;
         public Form1()
         {
             InitializeComponent();
@@ -41,10 +44,12 @@ namespace LabirintoWin
                 pennello.FillRectangle(tratto, area);
             } else if (e.Button == MouseButtons.Left && !mnuMuro.Checked)
             {
+                inizio = new Point(cellaX, cellaY);
                 tratto = new SolidBrush(Color.Green);
                 pennello.FillRectangle(tratto, area);
             } else if (e.Button == MouseButtons.Right && !mnuMuro.Checked)
             {
+                fine = new Point(cellaX, cellaY);
                 tratto = new SolidBrush(Color.Red);
                 pennello.FillRectangle(tratto, area);
             }
@@ -91,5 +96,33 @@ namespace LabirintoWin
             mnuMuro.Checked = false;
         }
 
+        private void btnRisolvi_Click(object sender, EventArgs e)
+        {
+            scansiona(scacchiera, inizio, fine, new List<Point>());
+        }
+
+        private void scansiona(bool[,] labirinto, Point start, Point finish, List<Point> percorso = null)
+        {
+            if(start == finish)
+            {
+                lstSoluzioni.Items.Add(percorso);
+            } else
+            {
+                percorso.Add(start);
+                List<Point?> possibilità = new List<Point?>() {
+                    start.Y - 1 >= 0 ? new Point(start.X, start.Y - 1) : null, // top
+                    start.X - 1 >= 0 ? new Point(start.X - 1, start.Y) : null, // left
+                    start.X + 1 < numCelle ? new Point(start.X + 1, start.Y) : null, // right
+                    start.Y + 1 < numCelle ? new Point(start.X, start.Y + 1) : null // bottom
+                };
+                foreach (Point? p in possibilità)
+                {
+                    if (p.HasValue && !labirinto[p.Value.X, p.Value.Y] && !percorso.Contains(p.Value))
+                    {
+                        scansiona(labirinto, p.Value, finish, percorso);
+                    }
+                }
+            }
+        }
     }
 }
