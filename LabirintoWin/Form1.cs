@@ -23,8 +23,6 @@ namespace LabirintoWin
         private void pctLabirinto_MouseMove(object sender, MouseEventArgs e)
         {
             Point attuale = new Point(e.X, e.Y);
-            lstSoluzioni.Items.Clear();
-            lstSoluzioni.Items.Add($"{e.Location}\t{e.Button}");
             // comprendo le coordinate della casella
             int cellaWidth = pctLabirinto.Width / numCelle;
             int cellaHeight = pctLabirinto.Height / numCelle;
@@ -98,6 +96,7 @@ namespace LabirintoWin
 
         private void btnRisolvi_Click(object sender, EventArgs e)
         {
+            lstSoluzioni.Items.Clear();
             scansiona(scacchiera, inizio, fine, new List<Point>());
         }
 
