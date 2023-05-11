@@ -5,6 +5,8 @@ namespace LabirintoWin
     public partial class Form1 : Form
     {
         private Point precedente = new Point(0,0);
+        private int numCelle = 10;
+        private bool[,] scacchiera;
         public Form1()
         {
             InitializeComponent();
@@ -12,6 +14,7 @@ namespace LabirintoWin
             pctLabirinto.Image = nuova;
             Graphics pennello = Graphics.FromImage(pctLabirinto.Image);
             pennello.Clear(Color.White);
+            scacchiera = new bool[numCelle, numCelle];
         }
 
         private void pctLabirinto_MouseMove(object sender, MouseEventArgs e)
@@ -20,25 +23,33 @@ namespace LabirintoWin
             lstSoluzioni.Items.Clear();
             lstSoluzioni.Items.Add($"{e.Location}\t{e.Button}");
             // comprendo le coordinate della casella
-            int numCelle = 20;
             int cellaWidth = pctLabirinto.Width / numCelle;
             int cellaHeight = pctLabirinto.Height / numCelle;
             int cellaX = e.X / cellaWidth;
             int cellaY = e.Y / cellaHeight;
             Rectangle area = new Rectangle(cellaX * cellaWidth, cellaY * cellaHeight, cellaWidth, cellaHeight);
-            if (e.Button == MouseButtons.Left)
+            Graphics pennello = Graphics.FromImage(pctLabirinto.Image);
+            SolidBrush tratto = new SolidBrush(Color.Black);
+            if (e.Button == MouseButtons.Left && mnuMuro.Checked)
             {
-                Graphics pennello = Graphics.FromImage(pctLabirinto.Image);
-                SolidBrush tratto = new SolidBrush(Color.Black);
+                scacchiera[cellaX, cellaY] = true;
                 pennello.FillRectangle(tratto, area);
-                pctLabirinto.Invalidate();
-            } else if(e.Button == MouseButtons.Right)
+            } else if(e.Button == MouseButtons.Right && mnuMuro.Checked)
             {
-                Graphics pennello = Graphics.FromImage(pctLabirinto.Image);
-                SolidBrush tratto = new SolidBrush(Color.White);
+                scacchiera[cellaX, cellaY] = false;
+                tratto = new SolidBrush(Color.White);
                 pennello.FillRectangle(tratto, area);
-                pctLabirinto.Invalidate();
+            } else if (e.Button == MouseButtons.Left && !mnuMuro.Checked)
+            {
+                tratto = new SolidBrush(Color.Green);
+                pennello.FillRectangle(tratto, area);
+            } else if (e.Button == MouseButtons.Right && !mnuMuro.Checked)
+            {
+                tratto = new SolidBrush(Color.Red);
+                pennello.FillRectangle(tratto, area);
             }
+            
+            pctLabirinto.Invalidate();
             precedente = attuale;
         }
 
@@ -67,5 +78,18 @@ namespace LabirintoWin
                 daSalvare.Save(dlgSalva.FileName);
             }
         }
+
+        private void mnuMuro_Click(object sender, EventArgs e)
+        {
+            mnuMuro.Checked = true;
+            mnuInizio.Checked = false;
+        }
+
+        private void mnuInizio_Click(object sender, EventArgs e)
+        {
+            mnuInizio.Checked = true;
+            mnuMuro.Checked = false;
+        }
+
     }
 }

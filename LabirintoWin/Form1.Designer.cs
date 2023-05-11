@@ -37,8 +37,8 @@
             this.mnuSalva = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuEsci = new System.Windows.Forms.ToolStripMenuItem();
             this.disegnaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.muroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.stradaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuMuro = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuInizio = new System.Windows.Forms.ToolStripMenuItem();
             this.dlgApri = new System.Windows.Forms.OpenFileDialog();
             this.dlgSalva = new System.Windows.Forms.SaveFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.pctLabirinto)).BeginInit();
@@ -105,44 +105,48 @@
             // mnuApri
             // 
             this.mnuApri.Name = "mnuApri";
-            this.mnuApri.Size = new System.Drawing.Size(224, 26);
+            this.mnuApri.Size = new System.Drawing.Size(127, 26);
             this.mnuApri.Text = "Apri";
             this.mnuApri.Click += new System.EventHandler(this.mnuApri_Click);
             // 
             // mnuSalva
             // 
             this.mnuSalva.Name = "mnuSalva";
-            this.mnuSalva.Size = new System.Drawing.Size(224, 26);
+            this.mnuSalva.Size = new System.Drawing.Size(127, 26);
             this.mnuSalva.Text = "Salva";
             this.mnuSalva.Click += new System.EventHandler(this.mnuSalva_Click);
             // 
             // mnuEsci
             // 
             this.mnuEsci.Name = "mnuEsci";
-            this.mnuEsci.Size = new System.Drawing.Size(224, 26);
+            this.mnuEsci.Size = new System.Drawing.Size(127, 26);
             this.mnuEsci.Text = "Esci";
             this.mnuEsci.Click += new System.EventHandler(this.mnuEsci_Click);
             // 
             // disegnaToolStripMenuItem
             // 
             this.disegnaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.muroToolStripMenuItem,
-            this.stradaToolStripMenuItem});
+            this.mnuMuro,
+            this.mnuInizio});
             this.disegnaToolStripMenuItem.Name = "disegnaToolStripMenuItem";
             this.disegnaToolStripMenuItem.Size = new System.Drawing.Size(77, 24);
             this.disegnaToolStripMenuItem.Text = "Disegna";
             // 
-            // muroToolStripMenuItem
+            // mnuMuro
             // 
-            this.muroToolStripMenuItem.Name = "muroToolStripMenuItem";
-            this.muroToolStripMenuItem.Size = new System.Drawing.Size(135, 26);
-            this.muroToolStripMenuItem.Text = "Muro";
+            this.mnuMuro.Checked = true;
+            this.mnuMuro.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.mnuMuro.Name = "mnuMuro";
+            this.mnuMuro.Size = new System.Drawing.Size(224, 26);
+            this.mnuMuro.Text = "muro / strada";
+            this.mnuMuro.Click += new System.EventHandler(this.mnuMuro_Click);
             // 
-            // stradaToolStripMenuItem
+            // mnuInizio
             // 
-            this.stradaToolStripMenuItem.Name = "stradaToolStripMenuItem";
-            this.stradaToolStripMenuItem.Size = new System.Drawing.Size(135, 26);
-            this.stradaToolStripMenuItem.Text = "Strada";
+            this.mnuInizio.Name = "mnuInizio";
+            this.mnuInizio.Size = new System.Drawing.Size(224, 26);
+            this.mnuInizio.Text = "inizio / fine";
+            this.mnuInizio.Click += new System.EventHandler(this.mnuInizio_Click);
             // 
             // dlgApri
             // 
@@ -181,7 +185,7 @@
         private ToolStripMenuItem disegnaToolStripMenuItem;
         private OpenFileDialog dlgApri;
         private SaveFileDialog dlgSalva;
-        private ToolStripMenuItem muroToolStripMenuItem;
-        private ToolStripMenuItem stradaToolStripMenuItem;
+        private ToolStripMenuItem mnuMuro;
+        private ToolStripMenuItem mnuInizio;
     }
 }
