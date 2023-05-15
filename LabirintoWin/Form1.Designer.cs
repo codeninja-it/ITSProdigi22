@@ -1,192 +1,197 @@
 ﻿namespace LabirintoWin
 {
-    partial class Form1
-    {
-        /// <summary>
-        ///  Required designer variable.
-        /// </summary>
-        private System.ComponentModel.IContainer components = null;
+	partial class Form1
+	{
+		/// <summary>
+		///  Required designer variable.
+		/// </summary>
+		private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        ///  Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
-            base.Dispose(disposing);
-        }
+		/// <summary>
+		///  Clean up any resources being used.
+		/// </summary>
+		/// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+		protected override void Dispose(bool disposing)
+		{
+			if (disposing && (components != null))
+			{
+				components.Dispose();
+			}
+			base.Dispose(disposing);
+		}
 
-        #region Windows Form Designer generated code
+		#region Windows Form Designer generated code
 
-        /// <summary>
-        ///  Required method for Designer support - do not modify
-        ///  the contents of this method with the code editor.
-        /// </summary>
-        private void InitializeComponent()
-        {
-            this.pctLabirinto = new System.Windows.Forms.PictureBox();
-            this.lstSoluzioni = new System.Windows.Forms.ListBox();
-            this.btnRisolvi = new System.Windows.Forms.Button();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuApri = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuSalva = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuEsci = new System.Windows.Forms.ToolStripMenuItem();
-            this.disegnaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuMuro = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuInizio = new System.Windows.Forms.ToolStripMenuItem();
-            this.dlgApri = new System.Windows.Forms.OpenFileDialog();
-            this.dlgSalva = new System.Windows.Forms.SaveFileDialog();
-            ((System.ComponentModel.ISupportInitialize)(this.pctLabirinto)).BeginInit();
-            this.menuStrip1.SuspendLayout();
-            this.SuspendLayout();
-            // 
-            // pctLabirinto
-            // 
-            this.pctLabirinto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.pctLabirinto.Location = new System.Drawing.Point(12, 27);
-            this.pctLabirinto.Name = "pctLabirinto";
-            this.pctLabirinto.Size = new System.Drawing.Size(466, 392);
-            this.pctLabirinto.TabIndex = 0;
-            this.pctLabirinto.TabStop = false;
-            this.pctLabirinto.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pctLabirinto_MouseMove);
-            // 
-            // lstSoluzioni
-            // 
-            this.lstSoluzioni.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lstSoluzioni.FormattingEnabled = true;
-            this.lstSoluzioni.IntegralHeight = false;
-            this.lstSoluzioni.ItemHeight = 20;
-            this.lstSoluzioni.Location = new System.Drawing.Point(484, 27);
-            this.lstSoluzioni.Name = "lstSoluzioni";
-            this.lstSoluzioni.Size = new System.Drawing.Size(477, 392);
-            this.lstSoluzioni.TabIndex = 1;
-            // 
-            // btnRisolvi
-            // 
-            this.btnRisolvi.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRisolvi.Location = new System.Drawing.Point(12, 430);
-            this.btnRisolvi.Name = "btnRisolvi";
-            this.btnRisolvi.Size = new System.Drawing.Size(949, 29);
-            this.btnRisolvi.TabIndex = 2;
-            this.btnRisolvi.Text = "risolvi";
-            this.btnRisolvi.UseVisualStyleBackColor = true;
-            this.btnRisolvi.Click += new System.EventHandler(this.btnRisolvi_Click);
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem,
-            this.disegnaToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(973, 28);
-            this.menuStrip1.TabIndex = 3;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // fileToolStripMenuItem
-            // 
-            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnuApri,
-            this.mnuSalva,
-            this.mnuEsci});
-            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
-            this.fileToolStripMenuItem.Text = "File";
-            // 
-            // mnuApri
-            // 
-            this.mnuApri.Name = "mnuApri";
-            this.mnuApri.Size = new System.Drawing.Size(127, 26);
-            this.mnuApri.Text = "Apri";
-            this.mnuApri.Click += new System.EventHandler(this.mnuApri_Click);
-            // 
-            // mnuSalva
-            // 
-            this.mnuSalva.Name = "mnuSalva";
-            this.mnuSalva.Size = new System.Drawing.Size(127, 26);
-            this.mnuSalva.Text = "Salva";
-            this.mnuSalva.Click += new System.EventHandler(this.mnuSalva_Click);
-            // 
-            // mnuEsci
-            // 
-            this.mnuEsci.Name = "mnuEsci";
-            this.mnuEsci.Size = new System.Drawing.Size(127, 26);
-            this.mnuEsci.Text = "Esci";
-            this.mnuEsci.Click += new System.EventHandler(this.mnuEsci_Click);
-            // 
-            // disegnaToolStripMenuItem
-            // 
-            this.disegnaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnuMuro,
-            this.mnuInizio});
-            this.disegnaToolStripMenuItem.Name = "disegnaToolStripMenuItem";
-            this.disegnaToolStripMenuItem.Size = new System.Drawing.Size(77, 24);
-            this.disegnaToolStripMenuItem.Text = "Disegna";
-            // 
-            // mnuMuro
-            // 
-            this.mnuMuro.Checked = true;
-            this.mnuMuro.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.mnuMuro.Name = "mnuMuro";
-            this.mnuMuro.Size = new System.Drawing.Size(224, 26);
-            this.mnuMuro.Text = "muro / strada";
-            this.mnuMuro.Click += new System.EventHandler(this.mnuMuro_Click);
-            // 
-            // mnuInizio
-            // 
-            this.mnuInizio.Name = "mnuInizio";
-            this.mnuInizio.Size = new System.Drawing.Size(224, 26);
-            this.mnuInizio.Text = "inizio / fine";
-            this.mnuInizio.Click += new System.EventHandler(this.mnuInizio_Click);
-            // 
-            // dlgApri
-            // 
-            this.dlgApri.FileName = "openFileDialog1";
-            // 
-            // Form1
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(973, 471);
-            this.Controls.Add(this.btnRisolvi);
-            this.Controls.Add(this.lstSoluzioni);
-            this.Controls.Add(this.pctLabirinto);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
-            this.Name = "Form1";
-            this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.pctLabirinto)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+		/// <summary>
+		///  Required method for Designer support - do not modify
+		///  the contents of this method with the code editor.
+		/// </summary>
+		private void InitializeComponent()
+		{
+			pctLabirinto = new PictureBox();
+			lstSoluzioni = new ListBox();
+			btnRisolvi = new Button();
+			menuStrip1 = new MenuStrip();
+			fileToolStripMenuItem = new ToolStripMenuItem();
+			mnuApri = new ToolStripMenuItem();
+			mnuSalva = new ToolStripMenuItem();
+			mnuEsci = new ToolStripMenuItem();
+			disegnaToolStripMenuItem = new ToolStripMenuItem();
+			mnuMuro = new ToolStripMenuItem();
+			mnuInizio = new ToolStripMenuItem();
+			dlgApri = new OpenFileDialog();
+			dlgSalva = new SaveFileDialog();
+			txtPreview = new TextBox();
+			((System.ComponentModel.ISupportInitialize)pctLabirinto).BeginInit();
+			menuStrip1.SuspendLayout();
+			SuspendLayout();
+			// 
+			// pctLabirinto
+			// 
+			pctLabirinto.Location = new Point(20, 43);
+			pctLabirinto.Margin = new Padding(5);
+			pctLabirinto.Name = "pctLabirinto";
+			pctLabirinto.Size = new Size(757, 627);
+			pctLabirinto.TabIndex = 0;
+			pctLabirinto.TabStop = false;
+			pctLabirinto.MouseMove += pctLabirinto_MouseMove;
+			// 
+			// lstSoluzioni
+			// 
+			lstSoluzioni.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+			lstSoluzioni.FormattingEnabled = true;
+			lstSoluzioni.IntegralHeight = false;
+			lstSoluzioni.ItemHeight = 32;
+			lstSoluzioni.Location = new Point(20, 680);
+			lstSoluzioni.Margin = new Padding(5);
+			lstSoluzioni.Name = "lstSoluzioni";
+			lstSoluzioni.Size = new Size(757, 292);
+			lstSoluzioni.TabIndex = 1;
+			lstSoluzioni.SelectedIndexChanged += lstSoluzioni_SelectedIndexChanged;
+			// 
+			// btnRisolvi
+			// 
+			btnRisolvi.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+			btnRisolvi.Location = new Point(20, 982);
+			btnRisolvi.Margin = new Padding(5);
+			btnRisolvi.Name = "btnRisolvi";
+			btnRisolvi.Size = new Size(1594, 46);
+			btnRisolvi.TabIndex = 2;
+			btnRisolvi.Text = "risolvi";
+			btnRisolvi.UseVisualStyleBackColor = true;
+			btnRisolvi.Click += btnRisolvi_Click;
+			// 
+			// menuStrip1
+			// 
+			menuStrip1.ImageScalingSize = new Size(20, 20);
+			menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, disegnaToolStripMenuItem });
+			menuStrip1.Location = new Point(0, 0);
+			menuStrip1.Name = "menuStrip1";
+			menuStrip1.Padding = new Padding(10, 3, 0, 3);
+			menuStrip1.Size = new Size(1633, 42);
+			menuStrip1.TabIndex = 3;
+			menuStrip1.Text = "menuStrip1";
+			// 
+			// fileToolStripMenuItem
+			// 
+			fileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { mnuApri, mnuSalva, mnuEsci });
+			fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+			fileToolStripMenuItem.Size = new Size(71, 36);
+			fileToolStripMenuItem.Text = "File";
+			// 
+			// mnuApri
+			// 
+			mnuApri.Name = "mnuApri";
+			mnuApri.Size = new Size(202, 44);
+			mnuApri.Text = "Apri";
+			mnuApri.Click += mnuApri_Click;
+			// 
+			// mnuSalva
+			// 
+			mnuSalva.Name = "mnuSalva";
+			mnuSalva.Size = new Size(202, 44);
+			mnuSalva.Text = "Salva";
+			mnuSalva.Click += mnuSalva_Click;
+			// 
+			// mnuEsci
+			// 
+			mnuEsci.Name = "mnuEsci";
+			mnuEsci.Size = new Size(202, 44);
+			mnuEsci.Text = "Esci";
+			mnuEsci.Click += mnuEsci_Click;
+			// 
+			// disegnaToolStripMenuItem
+			// 
+			disegnaToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { mnuMuro, mnuInizio });
+			disegnaToolStripMenuItem.Name = "disegnaToolStripMenuItem";
+			disegnaToolStripMenuItem.Size = new Size(120, 36);
+			disegnaToolStripMenuItem.Text = "Disegna";
+			// 
+			// mnuMuro
+			// 
+			mnuMuro.Checked = true;
+			mnuMuro.CheckState = CheckState.Checked;
+			mnuMuro.Name = "mnuMuro";
+			mnuMuro.Size = new Size(291, 44);
+			mnuMuro.Text = "muro / strada";
+			mnuMuro.Click += mnuMuro_Click;
+			// 
+			// mnuInizio
+			// 
+			mnuInizio.Name = "mnuInizio";
+			mnuInizio.Size = new Size(291, 44);
+			mnuInizio.Text = "inizio / fine";
+			mnuInizio.Click += mnuInizio_Click;
+			// 
+			// dlgApri
+			// 
+			dlgApri.FileName = "openFileDialog1";
+			// 
+			// txtPreview
+			// 
+			txtPreview.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+			txtPreview.Location = new Point(785, 45);
+			txtPreview.Multiline = true;
+			txtPreview.Name = "txtPreview";
+			txtPreview.Size = new Size(829, 929);
+			txtPreview.TabIndex = 4;
+			// 
+			// Form1
+			// 
+			AutoScaleDimensions = new SizeF(13F, 32F);
+			AutoScaleMode = AutoScaleMode.Font;
+			ClientSize = new Size(1633, 1048);
+			Controls.Add(txtPreview);
+			Controls.Add(btnRisolvi);
+			Controls.Add(lstSoluzioni);
+			Controls.Add(pctLabirinto);
+			Controls.Add(menuStrip1);
+			MainMenuStrip = menuStrip1;
+			Margin = new Padding(5);
+			Name = "Form1";
+			Text = "Form1";
+			((System.ComponentModel.ISupportInitialize)pctLabirinto).EndInit();
+			menuStrip1.ResumeLayout(false);
+			menuStrip1.PerformLayout();
+			ResumeLayout(false);
+			PerformLayout();
+		}
 
-        }
+		#endregion
 
-        #endregion
-
-        private PictureBox pctLabirinto;
-        private ListBox lstSoluzioni;
-        private Button btnRisolvi;
-        private MenuStrip menuStrip1;
-        private ToolStripMenuItem fileToolStripMenuItem;
-        private ToolStripMenuItem mnuApri;
-        private ToolStripMenuItem mnuSalva;
-        private ToolStripMenuItem mnuEsci;
-        private ToolStripMenuItem disegnaToolStripMenuItem;
-        private OpenFileDialog dlgApri;
-        private SaveFileDialog dlgSalva;
-        private ToolStripMenuItem mnuMuro;
-        private ToolStripMenuItem mnuInizio;
-    }
+		private PictureBox pctLabirinto;
+		private ListBox lstSoluzioni;
+		private Button btnRisolvi;
+		private MenuStrip menuStrip1;
+		private ToolStripMenuItem fileToolStripMenuItem;
+		private ToolStripMenuItem mnuApri;
+		private ToolStripMenuItem mnuSalva;
+		private ToolStripMenuItem mnuEsci;
+		private ToolStripMenuItem disegnaToolStripMenuItem;
+		private OpenFileDialog dlgApri;
+		private SaveFileDialog dlgSalva;
+		private ToolStripMenuItem mnuMuro;
+		private ToolStripMenuItem mnuInizio;
+		private TextBox txtPreview;
+	}
 }
