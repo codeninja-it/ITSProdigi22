@@ -4,7 +4,7 @@ namespace LabirintoWin
 {
 	public partial class Form1 : Form
 	{
-		private Point precedente = new Point(0, 0);
+		private List<Point> vecchioPercorso;
 		private int numCelle = 10;
 		private bool[,] scacchiera;
 		private Point inizio;
@@ -55,7 +55,6 @@ namespace LabirintoWin
 			}
 
 			pctLabirinto.Invalidate();
-			precedente = attuale;
 		}
 
 		private void mnuEsci_Click(object sender, EventArgs e)
@@ -102,7 +101,7 @@ namespace LabirintoWin
 			scansiona(scacchiera, inizio, fine, 50, new List<Point>());
 		}
 
-		private void scansiona(bool[,] labirinto, Point start, Point finish, int lunghezzaMassima, List<Point> percorso = null, int profondità = 0)
+		private void scansiona(bool[,] labirinto, Point start, Point finish, int lunghezzaMassima, List<Point> percorso = null)
 		{
 			if (start == finish)
 			{
@@ -110,7 +109,7 @@ namespace LabirintoWin
 			}
 			else
 			{
-				if(profondità < lunghezzaMassima)
+				if(percorso.Count < lunghezzaMassima)
 				{
 					percorso.Add(start);
 					List<Point?> possibilità = new List<Point?>() {
@@ -124,12 +123,10 @@ namespace LabirintoWin
 						if (p.HasValue && !labirinto[p.Value.X, p.Value.Y] && !percorso.Contains(p.Value))
 						{
 							List<Point> finoAdOra = new List<Point>(percorso);
-							profondità++;
-							scansiona(labirinto, p.Value, finish, lunghezzaMassima, finoAdOra, profondità);
+							scansiona(labirinto, p.Value, finish, lunghezzaMassima, finoAdOra);
 						}
 					}
 				}
-				
 			}
 		}
 
@@ -144,6 +141,18 @@ namespace LabirintoWin
 			int cellaWidth = pctLabirinto.Width / numCelle; // 400/10 = 40px
 			int cellaHeight = pctLabirinto.Height / numCelle;
 
+			if(vecchioPercorso != null)
+				foreach (Point vertice in vecchioPercorso)
+				{
+					penna.FillRectangle(
+							new SolidBrush(Color.White),
+							vertice.X * cellaWidth,
+							vertice.Y * cellaHeight,
+							cellaWidth,
+							cellaHeight						
+						);
+				}
+
 			foreach(Point vertice in percorso)
 			{
 				txtPreview.Text += vertice.ToString();
@@ -153,6 +162,7 @@ namespace LabirintoWin
 									cellaWidth, 
 									cellaHeight);
 			}
+			vecchioPercorso = percorso;
 			pctLabirinto.Invalidate();
 		}
 	}
