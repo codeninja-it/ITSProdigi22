@@ -1,7 +1,4 @@
-using System.Net;
-using System.Text;
-
-namespace NetServer
+namespace WebServer
 {
 	internal static class Program
 	{
@@ -16,6 +13,5 @@ namespace NetServer
 			ApplicationConfiguration.Initialize();
 			Application.Run(new Form1());
 		}
-
 	}
 }

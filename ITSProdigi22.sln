@@ -23,7 +23,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LabirintoWin", "LabirintoWi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmailScavenger", "EmailScavenger\EmailScavenger.csproj", "{174B07BF-3BFB-424C-8A55-67C8450F9396}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetServer", "NetServer\NetServer.csproj", "{782D6FB5-32B2-4249-AA07-726234A08383}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetServer", "NetServer\NetServer.csproj", "{782D6FB5-32B2-4249-AA07-726234A08383}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebServer", "WebServer\WebServer.csproj", "{213CCB15-4A91-477F-B513-279BD33849F0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +77,10 @@ Global
 		{782D6FB5-32B2-4249-AA07-726234A08383}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{782D6FB5-32B2-4249-AA07-726234A08383}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{782D6FB5-32B2-4249-AA07-726234A08383}.Release|Any CPU.Build.0 = Release|Any CPU
+		{213CCB15-4A91-477F-B513-279BD33849F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{213CCB15-4A91-477F-B513-279BD33849F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{213CCB15-4A91-477F-B513-279BD33849F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{213CCB15-4A91-477F-B513-279BD33849F0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

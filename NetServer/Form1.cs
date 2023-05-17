@@ -118,16 +118,22 @@ namespace NetServer
 			return testo.Trim();
 		}
 
+		private string Esegui(NetworkStream cornetta, string programma, string parametri)
+		{
+			Process cmd = new Process();
+			cmd.StartInfo.FileName = programma;
+			cmd.StartInfo.Arguments = parametri;
+			cmd.StartInfo.CreateNoWindow = true;
+			cmd.StartInfo.RedirectStandardOutput = true;
+			cmd.Start();
+			return cmd.StandardOutput.ReadToEnd();
+		}
+
 		private void EseguiExe(NetworkStream cornetta)
 		{
 			string programma = Chiedi(cornetta, "comando da eseguire? ");
 			string parametri = Chiedi(cornetta, "con quali parametri? ");
-			Process cmd = new Process();
-			cmd.StartInfo.FileName = programma;
-			cmd.StartInfo.Arguments = parametri;
-			cmd.StartInfo.RedirectStandardOutput = true;
-			cmd.Start();
-			string risultato = cmd.StandardOutput.ReadToEnd();
+			string risultato = Esegui(cornetta, programma, parametri);
 			Parla(cornetta, risultato);
 		}
 
@@ -135,12 +141,8 @@ namespace NetServer
 		{
 			string pagina = Chiedi(cornetta, "quale pagina? ");
 			string pathPagina = Path.Combine(txtPath.Text, pagina + ".txt");
-			Process interprete = new Process();
-			interprete.StartInfo.FileName = @"c:\xampp\php\php.exe";
-			interprete.StartInfo.Arguments = pathPagina;
-			interprete.StartInfo.RedirectStandardOutput = true;
-			interprete.Start();
-			string paginaDinamica = interprete.StandardOutput.ReadToEnd();
+			string percorsoPHP = @"c:\xampp\php\php.exe";
+			string paginaDinamica = Esegui(cornetta, percorsoPHP, pathPagina);
 			Parla(cornetta, paginaDinamica);
 		}
 
