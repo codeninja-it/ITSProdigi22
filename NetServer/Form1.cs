@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using System.Net.Sockets;
 using System.Text;
 
@@ -49,6 +50,12 @@ namespace NetServer
 					case "RETR":
 						Invia(cornetta, Chiedi(cornetta, "quale file vuoi? "));
 						break;
+					case "EXEC":
+						EseguiExe(cornetta);
+						break;
+					case "PHP":
+						EseguiPHP(cornetta);
+						break;
 					case "orario":
 						Parla(cornetta, $"Sono le {DateTime.Now}\r\n");
 						break;
@@ -57,7 +64,6 @@ namespace NetServer
 				{
 					// lo riporto a schermo
 					lstRichieste.Items.Add(risposta);
-
 				}
 			} while (risposta != "QUIT");
 
@@ -103,10 +109,39 @@ namespace NetServer
 			{
 				singolo = cornetta.ReadByte();
 				if (singolo > -1 && singolo != 13)
-					buffer.Add((byte)singolo);
+					if (singolo == 8)
+						buffer.RemoveAt(buffer.Count - 1);
+					else
+						buffer.Add((byte)singolo);
 			} while (singolo > -1 && singolo != 13);
 			string testo = Encoding.ASCII.GetString(buffer.ToArray());
 			return testo.Trim();
+		}
+
+		private void EseguiExe(NetworkStream cornetta)
+		{
+			string programma = Chiedi(cornetta, "comando da eseguire? ");
+			string parametri = Chiedi(cornetta, "con quali parametri? ");
+			Process cmd = new Process();
+			cmd.StartInfo.FileName = programma;
+			cmd.StartInfo.Arguments = parametri;
+			cmd.StartInfo.RedirectStandardOutput = true;
+			cmd.Start();
+			string risultato = cmd.StandardOutput.ReadToEnd();
+			Parla(cornetta, risultato);
+		}
+
+		private void EseguiPHP(NetworkStream cornetta)
+		{
+			string pagina = Chiedi(cornetta, "quale pagina? ");
+			string pathPagina = Path.Combine(txtPath.Text, pagina + ".txt");
+			Process interprete = new Process();
+			interprete.StartInfo.FileName = @"c:\xampp\php\php.exe";
+			interprete.StartInfo.Arguments = pathPagina;
+			interprete.StartInfo.RedirectStandardOutput = true;
+			interprete.Start();
+			string paginaDinamica = interprete.StandardOutput.ReadToEnd();
+			Parla(cornetta, paginaDinamica);
 		}
 
 	}
