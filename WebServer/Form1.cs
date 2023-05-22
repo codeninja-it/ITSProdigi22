@@ -9,6 +9,11 @@ namespace WebServer
 		public Form1()
 		{
 			InitializeComponent();
+			for(int i=0; i < 10; i++)
+			{
+				Orologio orologio = new Orologio();
+				orologio.Show();
+			}
 			/*
 			 * 1) permettere all'utente di selezionare la cartella di root
 			 * 2) attendere una chiamata
