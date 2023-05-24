@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Creato il: Mag 24, 2023 alle 14:31
+-- Creato il: Mag 24, 2023 alle 17:15
 -- Versione del server: 10.5.19-MariaDB-cll-lve-log
 -- Versione PHP: 8.1.16
 
@@ -73,16 +73,17 @@ CREATE TABLE `utenti` (
   `idutente` int(11) NOT NULL,
   `email` text NOT NULL,
   `pass` text NOT NULL,
-  `creazione` datetime NOT NULL DEFAULT current_timestamp()
+  `creazione` datetime NOT NULL DEFAULT current_timestamp(),
+  `valido` tinyint(1) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dump dei dati per la tabella `utenti`
 --
 
-INSERT INTO `utenti` (`idutente`, `email`, `pass`, `creazione`) VALUES
-(1, 'utente@prova.it', 'Ciao123', '2023-05-24 12:37:16'),
-(2, 'utente2@prova.it', '83e034a83c9101d18866867499680b73', '2023-05-24 12:40:06');
+INSERT INTO `utenti` (`idutente`, `email`, `pass`, `creazione`, `valido`) VALUES
+(2, 'utente2@prova.it', '83e034a83c9101d18866867499680b73', '2023-05-24 12:40:06', 1),
+(5, 'simoncini@codeninja.it', 'df98a5824b0366db60b0254794cb904b', '2023-05-24 16:52:20', 1);
 
 --
 -- Indici per le tabelle scaricate
@@ -104,7 +105,8 @@ ALTER TABLE `tipi`
 -- Indici per le tabelle `utenti`
 --
 ALTER TABLE `utenti`
-  ADD PRIMARY KEY (`idutente`);
+  ADD PRIMARY KEY (`idutente`),
+  ADD UNIQUE KEY `emailsingola` (`email`) USING HASH;
 
 --
 -- AUTO_INCREMENT per le tabelle scaricate
@@ -126,7 +128,7 @@ ALTER TABLE `tipi`
 -- AUTO_INCREMENT per la tabella `utenti`
 --
 ALTER TABLE `utenti`
-  MODIFY `idutente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `idutente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
