@@ -48,8 +48,8 @@
                     $riga = $dati->fetch_assoc();
                     // gli spedisco una mail con il codice di controllo
                     mail($_POST["email"], 
-                        "Conferma identit‡", 
-                        "<p>Per confermare la tua identit‡ <a href='".$_SERVER["SCRIPT_URI"]."?codice=".$riga["chiave"]."'>clicca qui</a>, arrivederci.</p>", 
+                        "Conferma identit√†", 
+                        "<p>Per confermare la tua identit√† <a href='".$_SERVER["SCRIPT_URI"]."?codice=".$riga["chiave"]."'>clicca qui</a>, arrivederci.</p>", 
                         "Content-type: text/html"
                     );
                 // chiudo la connessione
