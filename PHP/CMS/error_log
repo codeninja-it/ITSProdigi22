@@ -97,3 +97,182 @@ Stack trace:
 [30-May-2023 12:28:04 UTC] PHP Warning:  Undefined array key "act" in /home/enngzjko/public_html/cms/categorie.php on line 3
 [30-May-2023 12:39:18 UTC] PHP Warning:  Undefined array key "act" in /home/enngzjko/public_html/cms/login.php on line 4
 [30-May-2023 12:39:32 UTC] PHP Warning:  Undefined array key "act" in /home/enngzjko/public_html/cms/categorie.php on line 3
+[31-May-2023 08:02:57 UTC] PHP Warning:  Undefined array key "act" in /home/enngzjko/public_html/cms/tickets.php on line 3
+[31-May-2023 08:02:57 UTC] PHP Warning:  Undefined variable $dbip in /home/enngzjko/public_html/cms/config.php on line 34
+[31-May-2023 08:02:57 UTC] PHP Warning:  Undefined variable $dbuser in /home/enngzjko/public_html/cms/config.php on line 34
+[31-May-2023 08:02:57 UTC] PHP Warning:  Undefined variable $dbpass in /home/enngzjko/public_html/cms/config.php on line 34
+[31-May-2023 08:02:57 UTC] PHP Warning:  Undefined variable $dbdb in /home/enngzjko/public_html/cms/config.php on line 34
+[31-May-2023 08:02:57 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in /home/enngzjko/public_html/cms/config.php:34
+Stack trace:
+#0 /home/enngzjko/public_html/cms/config.php(34): mysqli->__construct(NULL, NULL, NULL, NULL)
+#1 /home/enngzjko/public_html/cms/tickets.php(11): lista('id', 'idcategoria', 'categoria', 'categorie')
+#2 {main}
+  thrown in /home/enngzjko/public_html/cms/config.php on line 34
+[31-May-2023 08:09:57 UTC] PHP Warning:  Undefined array key "act" in /home/enngzjko/public_html/cms/tickets.php on line 3
+[31-May-2023 08:09:57 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'enngzjko_wp9.categorie' doesn't exist in /home/enngzjko/public_html/cms/config.php:37
+Stack trace:
+#0 /home/enngzjko/public_html/cms/config.php(37): mysqli->query('SELECT idcatego...')
+#1 /home/enngzjko/public_html/cms/tickets.php(11): lista('id', 'idcategoria', 'categoria', 'categorie')
+#2 {main}
+  thrown in /home/enngzjko/public_html/cms/config.php on line 37
+[31-May-2023 08:10:01 UTC] PHP Warning:  Undefined array key "act" in /home/enngzjko/public_html/cms/tickets.php on line 3
+[31-May-2023 08:10:01 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'enngzjko_wp9.categorie' doesn't exist in /home/enngzjko/public_html/cms/config.php:37
+Stack trace:
+#0 /home/enngzjko/public_html/cms/config.php(37): mysqli->query('SELECT idcatego...')
+#1 /home/enngzjko/public_html/cms/tickets.php(11): lista('id', 'idcategoria', 'categoria', 'categorie')
+#2 {main}
+  thrown in /home/enngzjko/public_html/cms/config.php on line 37
+[31-May-2023 08:10:43 UTC] PHP Warning:  Undefined array key "act" in /home/enngzjko/public_html/cms/tickets.php on line 3
+[31-May-2023 08:18:06 UTC] PHP Warning:  Undefined array key "act" in /home/enngzjko/public_html/cms/tickets.php on line 3
+[31-May-2023 08:18:33 UTC] PHP Warning:  Undefined array key "act" in /home/enngzjko/public_html/cms/tickets.php on line 3
+[31-May-2023 08:22:12 UTC] PHP Warning:  Undefined array key "act" in /home/enngzjko/public_html/cms/tickets.php on line 3
+[31-May-2023 08:23:00 UTC] PHP Warning:  Undefined array key "act" in /home/enngzjko/public_html/cms/tickets.php on line 3
+[31-May-2023 08:24:26 UTC] PHP Warning:  Undefined array key "act" in /home/enngzjko/public_html/cms/tickets.php on line 3
+[31-May-2023 08:24:54 UTC] PHP Warning:  Undefined array key "act" in /home/enngzjko/public_html/cms/tickets.php on line 3
+[31-May-2023 08:34:26 UTC] PHP Warning:  Undefined array key "act" in /home/enngzjko/public_html/cms/tickets.php on line 3
+[31-May-2023 08:34:26 UTC] PHP Warning:  Undefined variable $buffer in /home/enngzjko/public_html/cms/tickets.php on line 17
+[31-May-2023 08:34:49 UTC] PHP Warning:  Undefined array key "act" in /home/enngzjko/public_html/cms/tickets.php on line 3
+[31-May-2023 08:35:14 UTC] PHP Warning:  Undefined array key "act" in /home/enngzjko/public_html/cms/tickets.php on line 3
+[31-May-2023 08:35:55 UTC] PHP Warning:  Undefined array key "act" in /home/enngzjko/public_html/cms/tickets.php on line 3
+[31-May-2023 08:38:54 UTC] PHP Warning:  Undefined array key "act" in /home/enngzjko/public_html/cms/tickets.php on line 3
+[31-May-2023 08:39:11 UTC] PHP Warning:  Undefined array key "act" in /home/enngzjko/public_html/cms/tickets.php on line 3
+[31-May-2023 10:09:30 UTC] PHP Warning:  Undefined array key "act" in /home/enngzjko/public_html/cms/tickets.php on line 3
+[31-May-2023 10:20:22 UTC] PHP Warning:  Undefined array key "act" in /home/enngzjko/public_html/cms/tickets.php on line 3
+[31-May-2023 10:25:07 UTC] PHP Warning:  Undefined array key "act" in /home/enngzjko/public_html/cms/tickets.php on line 3
+[31-May-2023 10:27:36 UTC] PHP Warning:  Undefined array key "act" in /home/enngzjko/public_html/cms/tickets.php on line 3
+[31-May-2023 11:01:12 UTC] PHP Warning:  Undefined array key "act" in /home/enngzjko/public_html/cms/tickets.php on line 3
+[31-May-2023 11:01:12 UTC] PHP Warning:  Undefined variable $table in /home/enngzjko/public_html/cms/config.php on line 87
+[31-May-2023 11:01:58 UTC] PHP Warning:  Undefined array key "act" in /home/enngzjko/public_html/cms/tickets.php on line 3
+[01-Jun-2023 07:24:13 UTC] PHP Warning:  Undefined array key "act" in /home/enngzjko/public_html/cms/tickets.php on line 3
+[01-Jun-2023 07:24:32 UTC] PHP Warning:  Undefined array key "act" in /home/enngzjko/public_html/cms/tickets.php on line 3
+[01-Jun-2023 07:28:33 UTC] PHP Warning:  Undefined array key "act" in /home/enngzjko/public_html/cms/tickets.php on line 3
+[01-Jun-2023 07:28:41 UTC] PHP Warning:  Undefined array key "act" in /home/enngzjko/public_html/cms/tickets.php on line 3
+[01-Jun-2023 07:28:52 UTC] PHP Warning:  Undefined array key "act" in /home/enngzjko/public_html/cms/tickets.php on line 3
+[01-Jun-2023 07:29:19 UTC] PHP Warning:  Undefined array key "act" in /home/enngzjko/public_html/cms/tickets.php on line 3
+[01-Jun-2023 07:30:52 UTC] PHP Warning:  Undefined array key "act" in /home/enngzjko/public_html/cms/tickets.php on line 3
+[01-Jun-2023 07:34:30 UTC] PHP Warning:  Undefined array key "act" in /home/enngzjko/public_html/cms/tickets.php on line 3
+[01-Jun-2023 07:34:30 UTC] PHP Warning:  Undefined variable $bufer in /home/enngzjko/public_html/cms/config.php on line 85
+[01-Jun-2023 07:36:23 UTC] PHP Warning:  Undefined array key "act" in /home/enngzjko/public_html/cms/tickets.php on line 3
+[01-Jun-2023 07:36:23 UTC] PHP Warning:  Undefined variable $bufer in /home/enngzjko/public_html/cms/config.php on line 86
+[01-Jun-2023 07:39:11 UTC] PHP Warning:  Undefined array key "act" in /home/enngzjko/public_html/cms/tickets.php on line 3
+[01-Jun-2023 07:39:11 UTC] PHP Warning:  Undefined variable $bufer in /home/enngzjko/public_html/cms/config.php on line 86
+[01-Jun-2023 07:41:54 UTC] PHP Warning:  Undefined array key "act" in /home/enngzjko/public_html/cms/tickets.php on line 3
+[01-Jun-2023 07:41:54 UTC] PHP Warning:  Undefined variable $bufer in /home/enngzjko/public_html/cms/config.php on line 86
+[01-Jun-2023 07:44:18 UTC] PHP Warning:  Undefined array key "act" in /home/enngzjko/public_html/cms/tickets.php on line 3
+[01-Jun-2023 07:44:18 UTC] PHP Warning:  Undefined variable $bufer in /home/enngzjko/public_html/cms/config.php on line 87
+[01-Jun-2023 09:30:59 UTC] PHP Warning:  Undefined array key "act" in /home/enngzjko/public_html/cms/tickets.php on line 3
+[01-Jun-2023 09:34:51 UTC] PHP Warning:  Undefined array key "act" in /home/enngzjko/public_html/cms/tickets.php on line 3
+[01-Jun-2023 09:35:12 UTC] PHP Warning:  Undefined array key "act" in /home/enngzjko/public_html/cms/tickets.php on line 3
+[01-Jun-2023 09:46:25 UTC] PHP Warning:  Undefined array key "mod" in /home/enngzjko/public_html/cms/index.php on line 9
+[01-Jun-2023 09:46:35 UTC] PHP Fatal error:  Cannot redeclare EseguiDB() (previously declared in /home/enngzjko/public_html/cms/config.php:15) in /home/enngzjko/public_html/cms/config.php on line 15
+[01-Jun-2023 09:47:31 UTC] PHP Warning:  Undefined array key "act" in /home/enngzjko/public_html/cms/moduli/tickets.php on line 2
+[01-Jun-2023 09:48:03 UTC] PHP Warning:  Undefined array key "act" in /home/enngzjko/public_html/cms/moduli/tickets.php on line 2
+[01-Jun-2023 09:48:09 UTC] PHP Warning:  Undefined array key "mod" in /home/enngzjko/public_html/cms/index.php on line 9
+[01-Jun-2023 09:51:18 UTC] PHP Warning:  Undefined array key "mod" in /home/enngzjko/public_html/cms/index.php on line 9
+[01-Jun-2023 09:51:24 UTC] PHP Warning:  Undefined array key "act" in /home/enngzjko/public_html/cms/moduli/tickets.php on line 2
+[01-Jun-2023 09:51:52 UTC] PHP Warning:  Undefined array key "act" in /home/enngzjko/public_html/cms/moduli/tickets.php on line 2
+[01-Jun-2023 09:51:56 UTC] PHP Warning:  Undefined array key "act" in /home/enngzjko/public_html/cms/moduli/tickets.php on line 2
+[01-Jun-2023 09:52:06 UTC] PHP Warning:  Undefined array key "act" in /home/enngzjko/public_html/cms/moduli/tickets.php on line 2
+[01-Jun-2023 10:01:48 UTC] PHP Warning:  Undefined array key "act" in /home/enngzjko/public_html/cms/moduli/tickets.php on line 2
+[01-Jun-2023 10:01:48 UTC] PHP Warning:  Undefined variable $links in /home/enngzjko/public_html/cms/config.php on line 25
+[01-Jun-2023 10:01:48 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /home/enngzjko/public_html/cms/config.php on line 25
+[01-Jun-2023 10:01:48 UTC] PHP Warning:  Undefined variable $scripts in /home/enngzjko/public_html/cms/config.php on line 29
+[01-Jun-2023 10:01:48 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /home/enngzjko/public_html/cms/config.php on line 29
+[01-Jun-2023 10:02:08 UTC] PHP Warning:  Undefined variable $links in /home/enngzjko/public_html/cms/config.php on line 25
+[01-Jun-2023 10:02:08 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /home/enngzjko/public_html/cms/config.php on line 25
+[01-Jun-2023 10:02:08 UTC] PHP Warning:  Undefined variable $scripts in /home/enngzjko/public_html/cms/config.php on line 29
+[01-Jun-2023 10:02:08 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /home/enngzjko/public_html/cms/config.php on line 29
+[01-Jun-2023 10:02:58 UTC] PHP Warning:  Undefined array key "act" in /home/enngzjko/public_html/cms/moduli/tickets.php on line 2
+[01-Jun-2023 10:02:58 UTC] PHP Warning:  Undefined variable $links in /home/enngzjko/public_html/cms/config.php on line 25
+[01-Jun-2023 10:02:58 UTC] PHP Warning:  Undefined global variable $ in /home/enngzjko/public_html/cms/config.php on line 25
+[01-Jun-2023 10:02:58 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /home/enngzjko/public_html/cms/config.php on line 25
+[01-Jun-2023 10:02:58 UTC] PHP Warning:  Undefined variable $scripts in /home/enngzjko/public_html/cms/config.php on line 29
+[01-Jun-2023 10:02:58 UTC] PHP Warning:  Undefined global variable $ in /home/enngzjko/public_html/cms/config.php on line 29
+[01-Jun-2023 10:02:58 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /home/enngzjko/public_html/cms/config.php on line 29
+[01-Jun-2023 10:03:32 UTC] PHP Warning:  Undefined array key "act" in /home/enngzjko/public_html/cms/moduli/tickets.php on line 2
+[01-Jun-2023 10:04:03 UTC] PHP Warning:  Undefined array key "act" in /home/enngzjko/public_html/cms/moduli/tickets.php on line 2
+[01-Jun-2023 10:04:05 UTC] PHP Warning:  Undefined array key "act" in /home/enngzjko/public_html/cms/moduli/tickets.php on line 2
+[01-Jun-2023 10:04:22 UTC] PHP Warning:  Undefined array key "act" in /home/enngzjko/public_html/cms/moduli/tickets.php on line 2
+[01-Jun-2023 10:04:29 UTC] PHP Warning:  Undefined array key "mod" in /home/enngzjko/public_html/cms/index.php on line 9
+[01-Jun-2023 10:04:49 UTC] PHP Warning:  Undefined array key "act" in /home/enngzjko/public_html/cms/moduli/tickets.php on line 2
+[01-Jun-2023 10:13:29 UTC] PHP Warning:  Undefined array key "mod" in /home/enngzjko/public_html/cms/index.php on line 9
+[01-Jun-2023 10:13:29 UTC] PHP Warning:  Undefined variable $buffer in /home/enngzjko/public_html/cms/index.php on line 17
+[01-Jun-2023 10:13:36 UTC] PHP Warning:  Undefined array key "act" in /home/enngzjko/public_html/cms/moduli/tickets.php on line 2
+[01-Jun-2023 10:13:40 UTC] PHP Warning:  Undefined array key "mod" in /home/enngzjko/public_html/cms/index.php on line 9
+[01-Jun-2023 10:13:40 UTC] PHP Warning:  Undefined variable $buffer in /home/enngzjko/public_html/cms/index.php on line 17
+[01-Jun-2023 10:30:46 UTC] PHP Warning:  Undefined array key "act" in /home/enngzjko/public_html/cms/tickets.php on line 3
+[01-Jun-2023 10:30:46 UTC] PHP Warning:  Undefined array key "mod" in /home/enngzjko/public_html/cms/config.php on line 87
+[01-Jun-2023 10:30:46 UTC] PHP Warning:  Undefined array key "mod" in /home/enngzjko/public_html/cms/config.php on line 94
+[01-Jun-2023 10:30:46 UTC] PHP Warning:  Undefined array key "mod" in /home/enngzjko/public_html/cms/config.php on line 94
+[01-Jun-2023 10:33:02 UTC] PHP Warning:  Undefined array key "mod" in /home/enngzjko/public_html/cms/index.php on line 9
+[01-Jun-2023 10:33:02 UTC] PHP Warning:  Undefined variable $buffer in /home/enngzjko/public_html/cms/index.php on line 17
+[01-Jun-2023 10:34:29 UTC] PHP Warning:  Undefined array key "act" in /home/enngzjko/public_html/cms/tickets.php on line 3
+[01-Jun-2023 10:34:29 UTC] PHP Warning:  Undefined array key "mod" in /home/enngzjko/public_html/cms/config.php on line 87
+[01-Jun-2023 10:34:29 UTC] PHP Warning:  Undefined array key "mod" in /home/enngzjko/public_html/cms/config.php on line 94
+[01-Jun-2023 10:34:33 UTC] PHP Warning:  Undefined array key "act" in /home/enngzjko/public_html/cms/tickets.php on line 3
+[01-Jun-2023 10:34:35 UTC] PHP Warning:  Undefined array key "act" in /home/enngzjko/public_html/cms/tickets.php on line 3
+[01-Jun-2023 10:34:36 UTC] PHP Warning:  Undefined array key "act" in /home/enngzjko/public_html/cms/tickets.php on line 3
+[01-Jun-2023 10:47:10 UTC] PHP Warning:  Undefined array key "mod" in /home/enngzjko/public_html/cms/index.php on line 9
+[01-Jun-2023 10:48:33 UTC] PHP Warning:  Undefined array key "act" in /home/enngzjko/public_html/cms/moduli/tickets.php on line 2
+[01-Jun-2023 10:48:50 UTC] PHP Warning:  Undefined array key "act" in /home/enngzjko/public_html/cms/moduli/tickets.php on line 2
+[01-Jun-2023 10:49:23 UTC] PHP Warning:  Undefined array key "act" in /home/enngzjko/public_html/cms/moduli/tickets.php on line 2
+[01-Jun-2023 10:50:36 UTC] PHP Warning:  Undefined array key "act" in /home/enngzjko/public_html/cms/moduli/tickets.php on line 2
+[01-Jun-2023 10:51:25 UTC] PHP Warning:  Undefined array key "act" in /home/enngzjko/public_html/cms/moduli/tickets.php on line 2
+[01-Jun-2023 10:52:03 UTC] PHP Warning:  Undefined array key "act" in /home/enngzjko/public_html/cms/moduli/tickets.php on line 2
+[01-Jun-2023 10:56:14 UTC] PHP Warning:  Undefined array key "act" in /home/enngzjko/public_html/cms/moduli/tickets.php on line 2
+[01-Jun-2023 10:57:02 UTC] PHP Warning:  Undefined array key "act" in /home/enngzjko/public_html/cms/moduli/tickets.php on line 2
+[01-Jun-2023 10:57:45 UTC] PHP Warning:  Undefined array key "act" in /home/enngzjko/public_html/cms/moduli/tickets.php on line 2
+[01-Jun-2023 10:58:18 UTC] PHP Warning:  Undefined array key "mod" in /home/enngzjko/public_html/cms/index.php on line 9
+[01-Jun-2023 10:58:19 UTC] PHP Warning:  Undefined array key "mod" in /home/enngzjko/public_html/cms/index.php on line 9
+[01-Jun-2023 10:58:19 UTC] PHP Warning:  Undefined array key "mod" in /home/enngzjko/public_html/cms/index.php on line 9
+[01-Jun-2023 10:58:19 UTC] PHP Warning:  Undefined array key "mod" in /home/enngzjko/public_html/cms/index.php on line 9
+[01-Jun-2023 10:58:19 UTC] PHP Warning:  Undefined array key "act" in /home/enngzjko/public_html/cms/moduli/tickets.php on line 2
+[01-Jun-2023 10:58:20 UTC] PHP Warning:  Undefined array key "act" in /home/enngzjko/public_html/cms/moduli/tickets.php on line 2
+[01-Jun-2023 12:17:35 UTC] PHP Warning:  Undefined array key "mod" in /home/enngzjko/public_html/cms/index.php on line 9
+[01-Jun-2023 12:18:55 UTC] PHP Warning:  Undefined array key "mod" in /home/enngzjko/public_html/cms/index.php on line 9
+[01-Jun-2023 12:20:14 UTC] PHP Warning:  Undefined array key "mod" in /home/enngzjko/public_html/cms/index.php on line 9
+[01-Jun-2023 12:20:15 UTC] PHP Warning:  Undefined array key "mod" in /home/enngzjko/public_html/cms/index.php on line 9
+[01-Jun-2023 12:20:38 UTC] PHP Warning:  Undefined array key "mod" in /home/enngzjko/public_html/cms/index.php on line 9
+[01-Jun-2023 12:21:19 UTC] PHP Warning:  Undefined array key "mod" in /home/enngzjko/public_html/cms/index.php on line 9
+[01-Jun-2023 12:21:20 UTC] PHP Warning:  Undefined array key "mod" in /home/enngzjko/public_html/cms/index.php on line 9
+[01-Jun-2023 12:23:37 UTC] PHP Warning:  Undefined array key "mod" in /home/enngzjko/public_html/cms/index.php on line 9
+[01-Jun-2023 12:24:21 UTC] PHP Warning:  Undefined array key "mod" in /home/enngzjko/public_html/cms/index.php on line 9
+[01-Jun-2023 12:24:34 UTC] PHP Warning:  Undefined array key "act" in /home/enngzjko/public_html/cms/moduli/tickets.php on line 2
+[01-Jun-2023 12:24:34 UTC] PHP Warning:  Undefined array key "type" in /home/enngzjko/public_html/cms/moduli/tickets.php on line 27
+[01-Jun-2023 12:27:47 UTC] PHP Warning:  Undefined array key "act" in /home/enngzjko/public_html/cms/moduli/tickets.php on line 2
+[01-Jun-2023 12:27:47 UTC] PHP Warning:  Undefined array key "type" in /home/enngzjko/public_html/cms/moduli/tickets.php on line 27
+[01-Jun-2023 12:28:29 UTC] PHP Warning:  Undefined array key "act" in /home/enngzjko/public_html/cms/moduli/tickets.php on line 2
+[01-Jun-2023 12:28:29 UTC] PHP Warning:  Undefined array key "type" in /home/enngzjko/public_html/cms/moduli/tickets.php on line 27
+[01-Jun-2023 12:29:41 UTC] PHP Warning:  Undefined array key "act" in /home/enngzjko/public_html/cms/moduli/tickets.php on line 2
+[01-Jun-2023 12:29:41 UTC] PHP Warning:  Undefined array key "type" in /home/enngzjko/public_html/cms/moduli/tickets.php on line 27
+[01-Jun-2023 12:31:39 UTC] PHP Warning:  Undefined array key "act" in /home/enngzjko/public_html/cms/moduli/tickets.php on line 2
+[01-Jun-2023 12:31:39 UTC] PHP Warning:  Undefined array key "type" in /home/enngzjko/public_html/cms/moduli/tickets.php on line 27
+[01-Jun-2023 12:31:47 UTC] PHP Warning:  Undefined array key "mod" in /home/enngzjko/public_html/cms/index.php on line 9
+[01-Jun-2023 12:31:47 UTC] PHP Warning:  Undefined variable $buffer in /home/enngzjko/public_html/cms/index.php on line 13
+[01-Jun-2023 12:31:47 UTC] PHP Deprecated:  str_replace(): Passing null to parameter #2 ($replace) of type array|string is deprecated in /home/enngzjko/public_html/cms/config.php on line 46
+[01-Jun-2023 12:31:53 UTC] PHP Warning:  Undefined array key "act" in /home/enngzjko/public_html/cms/moduli/tickets.php on line 2
+[01-Jun-2023 12:31:53 UTC] PHP Warning:  Undefined array key "type" in /home/enngzjko/public_html/cms/moduli/tickets.php on line 27
+[01-Jun-2023 12:34:05 UTC] PHP Warning:  Undefined array key "act" in /home/enngzjko/public_html/cms/moduli/tickets.php on line 2
+[01-Jun-2023 12:34:05 UTC] PHP Warning:  Undefined array key "type" in /home/enngzjko/public_html/cms/moduli/tickets.php on line 27
+[01-Jun-2023 12:34:33 UTC] PHP Warning:  Undefined array key "act" in /home/enngzjko/public_html/cms/moduli/tickets.php on line 2
+[01-Jun-2023 12:34:33 UTC] PHP Warning:  Undefined array key "type" in /home/enngzjko/public_html/cms/moduli/tickets.php on line 27
+[01-Jun-2023 12:34:43 UTC] PHP Warning:  Undefined array key "act" in /home/enngzjko/public_html/cms/moduli/tickets.php on line 2
+[01-Jun-2023 12:34:43 UTC] PHP Warning:  Undefined array key "type" in /home/enngzjko/public_html/cms/moduli/tickets.php on line 27
+[01-Jun-2023 12:35:11 UTC] PHP Warning:  Undefined array key "act" in /home/enngzjko/public_html/cms/moduli/tickets.php on line 2
+[01-Jun-2023 12:35:11 UTC] PHP Warning:  Undefined array key "type" in /home/enngzjko/public_html/cms/moduli/tickets.php on line 27
+[01-Jun-2023 12:35:29 UTC] PHP Warning:  Undefined array key "act" in /home/enngzjko/public_html/cms/moduli/tickets.php on line 2
+[01-Jun-2023 12:35:29 UTC] PHP Warning:  Undefined array key "type" in /home/enngzjko/public_html/cms/moduli/tickets.php on line 27
+[01-Jun-2023 12:35:43 UTC] PHP Warning:  Undefined array key "act" in /home/enngzjko/public_html/cms/moduli/tickets.php on line 2
+[01-Jun-2023 12:35:43 UTC] PHP Warning:  Undefined array key "type" in /home/enngzjko/public_html/cms/moduli/tickets.php on line 27
+[01-Jun-2023 12:36:44 UTC] PHP Warning:  Undefined array key "act" in /home/enngzjko/public_html/cms/moduli/tickets.php on line 2
+[01-Jun-2023 12:36:44 UTC] PHP Warning:  Undefined array key "type" in /home/enngzjko/public_html/cms/moduli/tickets.php on line 27
+[01-Jun-2023 12:36:46 UTC] PHP Warning:  Undefined array key "act" in /home/enngzjko/public_html/cms/moduli/tickets.php on line 2
+[01-Jun-2023 12:36:46 UTC] PHP Warning:  Undefined array key "type" in /home/enngzjko/public_html/cms/moduli/tickets.php on line 27
+[01-Jun-2023 12:36:58 UTC] PHP Warning:  Undefined array key "act" in /home/enngzjko/public_html/cms/moduli/tickets.php on line 2
+[01-Jun-2023 12:36:58 UTC] PHP Warning:  Undefined array key "type" in /home/enngzjko/public_html/cms/moduli/tickets.php on line 27
+[01-Jun-2023 12:37:23 UTC] PHP Warning:  Undefined array key "mod" in /home/enngzjko/public_html/cms/index.php on line 9
+[01-Jun-2023 12:37:23 UTC] PHP Warning:  Undefined variable $buffer in /home/enngzjko/public_html/cms/index.php on line 13
+[01-Jun-2023 12:37:23 UTC] PHP Deprecated:  str_replace(): Passing null to parameter #2 ($replace) of type array|string is deprecated in /home/enngzjko/public_html/cms/config.php on line 46
+[01-Jun-2023 12:37:23 UTC] PHP Warning:  Undefined array key "mod" in /home/enngzjko/public_html/cms/config.php on line 27
+[01-Jun-2023 12:37:23 UTC] PHP Warning:  Undefined array key "mod" in /home/enngzjko/public_html/cms/config.php on line 27
+[01-Jun-2023 12:37:23 UTC] PHP Warning:  Undefined array key "mod" in /home/enngzjko/public_html/cms/config.php on line 27
