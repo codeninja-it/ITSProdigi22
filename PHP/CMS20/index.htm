@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <title>Esempio AJAX</title>
+        <meta charset="UTF-8"/>
+    </head>
+    <body>
+        <h1>Loggati</h1>
+        <p>usa i campi qui sotto per eseguire la tua login</p>
+        <input id="nome">
+        <input type="password" id="password">
+        <button id="btnInvio">accedi</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>Creazione</th>
+                    <th>Ticket</th>
+                </tr>
+            </thead>
+            <tbody id="lavagna"></tbody>
+        </table>
+        <script>
+            var bottone = document.getElementById("btnInvio");
+            var txtNome = document.getElementById("nome");
+            var txtPassword = document.getElementById("password");
+            var ultimoRicevuto = 0;
+            
+            bottone.addEventListener("click", spedisci);
+            
+            function spedisci(){
+                var telefono = new XMLHttpRequest();
+                telefono.open("POST", "endpoint.php?mod=login", true);
+                telefono.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+                telefono.addEventListener("readystatechange", risposta);
+                telefono.send("email=" + txtNome.value + "&pass=" + txtPassword.value);
+            }
+            
+            function risposta(argomenti){
+                if(argomenti.target.status == 200 && argomenti.target.readyState == 4){
+                    var dati = JSON.parse(argomenti.target.response);
+                    if(dati.status == 200){
+                        var utente = dati.data;
+                        alert("Bentornato " + utente.nome + "!");
+                        setInterval(function(e){
+                                        caricaTicket();
+                                    },
+                                    1000);
+                    } else {
+                        alert("Errore : " + dati.data);
+                    }
+                }
+            }
+            
+            function caricaTicket(){
+                let telefono = new XMLHttpRequest();
+                telefono.open("GET", "endpoint.php?mod=ticket&ultimo=" + ultimoRicevuto, true);
+                telefono.addEventListener("readystatechange", function(e){
+                    if(telefono.status == 200 && telefono.readyState == 4){
+                        let dati = JSON.parse(telefono.response);
+                        if(dati.status == 200 ){
+                            let righe = dati.data;
+                            let lavagna = document.getElementById("lavagna");
+                            for(let i=0; i < righe.length; i++){
+                                if(ultimoRicevuto < parseInt(righe[i]["idticket"])){
+                                    lavagna.innerHTML += "<tr><td>" + righe[i]["creazione"] + "</td><td>" + righe[i]["ticket"] + "</td></tr>";
+                                    ultimoRicevuto = Math.max(ultimoRicevuto, parseInt(righe[i]["idticket"]));
+                                }
+                                
+                            }
+                        }
+                    }
+                });
+                telefono.send();
+            }
+        </script>
+    </body>
+</html>
