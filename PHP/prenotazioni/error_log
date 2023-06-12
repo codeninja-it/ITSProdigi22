@@ -1,0 +1,24 @@
+[12-Jun-2023 09:39:01 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'enngzjko_wp9.rst_tavoli' doesn't exist in /home/enngzjko/public_html/prenotazioni/endpoint.php:10
+Stack trace:
+#0 /home/enngzjko/public_html/prenotazioni/endpoint.php(10): mysqli->query('SELECT idtavolo...')
+#1 /home/enngzjko/public_html/prenotazioni/endpoint.php(30): EseguiDB('SELECT idtavolo...')
+#2 {main}
+  thrown in /home/enngzjko/public_html/prenotazioni/endpoint.php on line 10
+[12-Jun-2023 09:39:01 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'enngzjko_wp9.rst_piatti' doesn't exist in /home/enngzjko/public_html/prenotazioni/endpoint.php:10
+Stack trace:
+#0 /home/enngzjko/public_html/prenotazioni/endpoint.php(10): mysqli->query('SELECT idpiatto...')
+#1 /home/enngzjko/public_html/prenotazioni/endpoint.php(25): EseguiDB('SELECT idpiatto...')
+#2 {main}
+  thrown in /home/enngzjko/public_html/prenotazioni/endpoint.php on line 10
+[12-Jun-2023 10:13:45 UTC] PHP Warning:  Undefined array key "mod" in /home/enngzjko/public_html/prenotazioni/endpoint.php on line 19
+[12-Jun-2023 10:14:32 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home/enngzjko/public_html/prenotazioni/endpoint.php:12
+Stack trace:
+#0 /home/enngzjko/public_html/prenotazioni/endpoint.php(36): EseguiDB('INSERT INTO rst...')
+#1 {main}
+  thrown in /home/enngzjko/public_html/prenotazioni/endpoint.php on line 12
+[12-Jun-2023 13:58:45 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Host 'localhost' is not allowed to connect to this MariaDB server in /home/enngzjko/public_html/prenotazioni/endpoint.php:9
+Stack trace:
+#0 /home/enngzjko/public_html/prenotazioni/endpoint.php(9): mysqli->__construct('127.0.0.1', 'enngzjko_wp9', '3[].X@n5uBS!5pu...', 'enngzjko_wp9')
+#1 /home/enngzjko/public_html/prenotazioni/endpoint.php(30): EseguiDB('SELECT rst_piat...')
+#2 {main}
+  thrown in /home/enngzjko/public_html/prenotazioni/endpoint.php on line 9
